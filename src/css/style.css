@@ -21,21 +21,21 @@ header{
     display: flex;
     justify-content: space-between;
     margin-top: 20px;
-    padding-left: 500px;
-    padding-right: 100px;
     height: 50px;
+
 }
 
+.Header-menu li{
+    margin-right:10px ;
+}
 .The-menu{
     display: flex;
     font-size: 0.5em;
-    width: 200px;
-    padding-left: 580px;
-    padding-right: 150px;
-    justify-content: space-between;
-    display: none;
-    
+    width: 15%;
+    padding-left: 80%;
+    display: none;   
 }
+
 ul{
     list-style: none;
     color: black;
@@ -48,7 +48,7 @@ h1,h2{
 }
 h1{
     padding-bottom: 10px;
-    font-size: 3em;
+    font-size: 2em;
 }
 
 /* *******Side-Bar**** */
@@ -145,7 +145,7 @@ h1{
 h3{
     padding: 5px 0px;
     text-decoration: underline;
-    font-size: 3em;
+    font-size: 2em;
 }
 .myarticle{
     width: 300px;
@@ -166,7 +166,7 @@ form{
 .form-values{
     background-color:rgba(245, 245, 248, 0.2)
 }
-#txt{
+.txt{
     background-color:rgb(238, 240, 238);
     width: 70%;
     height: 3em;
@@ -210,7 +210,7 @@ a{
 }
 
 /* **********ToDo********** */
-pre{
+p{
     margin: 25px;
     
 }
@@ -227,6 +227,13 @@ pre{
 }
 
 /* **********education********* */
+#education h1{
+    font-size: 5rem;
+}
+#education .The-menu{
+    padding-left: 55%;
+    font-size: 1rem;
+}
 table{
     border-collapse: collapse;
     width: 94%;
@@ -289,16 +296,20 @@ td{
     font-size: 2rem;
     text-decoration: none;
 }
-
+.flex-desktop{
+    display: flex;
+    flex-direction: column;
+}
 .centered {
     width: 90%;
-    margin-left: 100px;
+    margin-left: 10%;
 }
-.centered span{
+.centered  span{
     display: block;
 }
 audio{
-    margin-left:30px;
+    margin-left:3%;
+    /* width: 15%; */
 }
 
 #hobby{
@@ -399,9 +410,207 @@ audio{
 .another-menu {
     display: inline-flex;
     justify-content: space-between;
+    
 }
 #resume .another-menu {
-    padding-left: 500px;
-    font-size: 0.5em;
+    padding-left: 70%;
+    font-size: 1rem;
+    
 
+}
+
+@media only screen and (min-width: 650px){
+
+
+/* *********Education******* */
+.Landscape-hidden{
+    display: none;
+}
+.ed2{
+    display: flex;
+}
+
+/* *********Resume******* */
+        
+    #education .to-be-flexed-tablet{
+        display: flex;
+        flex-wrap: nowrap;
+    }
+    #education .to-be-flexed-tablet img {
+        width: 40%;
+                }
+
+/* *********hobby******* */
+.flex-landscape{
+    display: flex;
+    flex-direction: row;
+        }
+}
+/* **************The-tablet******** */
+
+@media only screen and (min-width: 768px) {
+    /* *****HomePage**** */
+#home .to-size {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .to_be_floated-left {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .myarticle {
+        order: 1;
+    }
+
+    .to-size img {
+        display: inline-block;
+    }
+
+    .to-be-flexed-tablet {
+        display: flex;
+        justify-content: space-evenly;
+
+    }
+    #first{
+        width: 50%;
+    }
+    .txt{
+        width: 90%;
+    }
+
+        /* *********to-do******* */
+    .to-size iframe,img{
+        width: 48%;
+        margin-right: 15px;
+    }
+    .to-size figcaption {
+        width: 48%;
+        margin-bottom: 10px;
+         }
+    figure{
+        display: flex;
+    }
+
+        /* *********Education******* */
+    .to-be-hidden-mobile{
+        display: flex;
+        flex-direction: row;
+    margin: 5%;
+    }
+    .to-be-hidden-mobile img{
+        border-radius: 50%;
+        margin-right: 15px;
+        height: 400px;
+    }
+    #education .ed2 {
+        display: flex;
+        flex-direction: row;
+    }
+        .Landscape-hidden {
+            display: contents;
+        }
+    #tablet-hidden{
+        display: none;
+    }
+    .another-menu{
+        padding-left: 70%;
+        font-size: 20px;
+    }
+    .to-be-flexed-tablet{
+        display:flex;
+    }
+    .to-be-flexed-tablet img{
+        width: 65%;
+    }
+
+        /* *********Resume******* */
+    #resume h3{
+        margin-left: 25px;
+    }
+    .side-by-side{
+        display: flex;
+        justify-content: space-around;
+
+    }
+        /* *********hobby******* */
+
+        .tablet-hidden{
+        display: none;
+        }
+        .flex-tablet{
+            display: flex;
+            flex-direction: row;
+        }
+        .centered {
+               width: 45%;
+               margin-left: 4%;
+          } 
+
+
+} 
+
+
+/* *****The-Laptop and above**** */
+
+
+@media only screen and (min-width: 
+992px) {
+    /* ******HomePage********* */
+        .Header-menu I {
+            display: none;
+        }
+    
+        .The-menu {
+            display: flex;
+            margin-left: 25%;
+    
+        }
+    
+        #home .The-menu {
+            margin-left: 80%;
+        }
+    
+        .to-size-desktop {
+            display: flex;
+            flex-direction: row;
+        }
+    
+    
+        /* *********Education******* */
+        #tablet-hidden {
+            display: contents;
+        }
+    
+        table {
+            width: 60%;
+        }
+    
+        .ed1 {
+            display: flex;
+        }
+    
+        #education .to-be-centered {
+            display: flex;
+        }
+    
+        /* *********Resume******* */
+    
+        .flex-desktop {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            justify-content: space-around;
+        }
+    
+        #hidden-desktop {
+            display: none;
+        }
+    
+        /* *********hobby******* */
+    
+        .tablet-hidden {
+            display: block;
+        }
 }
