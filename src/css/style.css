@@ -18,10 +18,14 @@ header{
     box-shadow: 10px 5px 5px 15px rgba(118, 118, 148, 0.2)
 }
 .Header-menu{
+    width: 70%;
     display: flex;
-    justify-content: space-between;
+    justify-content:flex-end;
     margin-top: 20px;
     height: 50px;
+    
+    align-items: end;
+    
 
 }
 
@@ -30,10 +34,11 @@ header{
 }
 .The-menu{
     display: flex;
-    font-size: 0.5em;
-    width: 15%;
-    padding-left: 80%;
-    display: none;   
+    font-size: 0.45em;
+    color: black;
+    display: none;  
+ 
+    
 }
 
 ul{
@@ -59,22 +64,64 @@ h1{
     width: 300px;
     height: 100%;
     background-color: #333;
-    transition: left 0.5s ease;
+    transition: left 0.25s ease;
 }
 
-.sideBar.open {
-    left: 0;
+
+.sideBar{
+    display: none;
+}
+
+.sideBar {
+    position: fixed;
+    top: 0;
+    left: -250px;
+    width: 500px;
+    height: 100vh;
+    background-color: grey;
+    padding: 20px;
+    transition: left 0.3s ease-in-out;
+    z-index: 1;
+}
+
+.sideBar ul {
+    list-style: none;
+}
+
+.sideBar ul li {
+    margin-bottom: 50px;
+    margin-left: 280px;
+}
+
+.sideBar ul li a {
+    text-decoration: none;
+    color: white#333;
+}
+
+.sideBar ul li a:hover {
+    color: #000;
+}
+
+#menu-toggle {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    font-size: 30px;
+    color: #333;
+    cursor: pointer;
 }
 
 .sideBar img {
+    width: 25%;
     display: block;
-    margin: 20px auto;
+    border-radius: 50px;
+    margin: 20px 0 10px 280px;
 }
 
 .sideBar h2 {
-    color: #fff;
-    text-align: center;
+    color: white;
     margin-bottom: 20px;
+    margin-left: 280px;
 }
 
 .sideBar ul {
@@ -85,30 +132,33 @@ h1{
 
 .sideBar li {
     margin-bottom: 10px;
+    color: white;
 }
 
 .sideBar li a {
-    color: #fff;
+    color: white;
     text-decoration: none;
     display: block;
-    padding: 10px;
+    padding: 4px;
     transition: background-color 0.3s ease;
 }
 
 .sideBar li a:hover {
-    background-color: #555;
+    background-color: rgb(106, 105, 105);
 }
 
 .sideBar h4 {
     color: #fff;
     text-align: center;
-    margin-top: 40px;
+    margin-top: 100px;
     margin-bottom: 10px;
+    margin-left: 80px;
 }
 
 .toContact {
     display: flex;
     justify-content: center;
+    margin-left: 180px;
 }
 
 .toContact a {
@@ -118,11 +168,9 @@ h1{
 .toContact img {
     width: 25px;
     height: auto;
+    margin-left: 10px;
 }
-.sideBar{
 
-    display: none;
-}
 
 .to_be_floated-left{
     display: flex;
@@ -225,14 +273,28 @@ p{
 .to-div h2{
     font-size: 4rem;
 }
+.to-slide{
+    display: flex;
+    justify-content: center;
+}
+.to-slide span{
+    font-size:xx-large;
+    margin: 10px auto;
+    
+
+}
 
 /* **********education********* */
 #education h1{
     font-size: 5rem;
 }
 #education .The-menu{
-    padding-left: 55%;
     font-size: 1rem;
+    margin-top: 20px;
+    margin-left: 5%;
+}
+education.The-menu li{
+    margin-left: 10px;
 }
 table{
     border-collapse: collapse;
@@ -407,16 +469,14 @@ audio{
 
 /* *******Troubling Menu********* */
 
-.another-menu {
-    display: inline-flex;
-    justify-content: space-between;
-    
-}
 #resume .another-menu {
-    padding-left: 70%;
-    font-size: 1rem;
-    
-
+    font-size: .55em;
+    margin-left: .5px;
+    height: 15px;
+    margin-top: 25px;
+}
+#resume .another-menu li{
+    margin-left: 5px;
 }
 
 @media only screen and (min-width: 650px){
@@ -454,6 +514,7 @@ audio{
         display: flex;
         flex-direction: row;
     }
+    
 
     .to_be_floated-left {
         flex-direction: column;
@@ -571,6 +632,10 @@ audio{
         #home .The-menu {
             margin-left: 80%;
         }
+        .sideBar {
+        
+                    display: none;
+                }
     
         .to-size-desktop {
             display: flex;
